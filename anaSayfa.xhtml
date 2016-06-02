@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+
+<head></head>
+<body>
+<h:form>
+	<h:commandButton value="MailOku" action="#{mailKontrol.kontrol()}" ></h:commandButton>
+	<h:commandButton value="Öğrenci Güncelleme" action="OgrGuncelle" />
+	<h:commandButton value="Çıkış" action="Login"></h:commandButton>
+</h:form>
+
+
+<h:dataTable value="#{ogrBilgiCek.getOgrencilerTablosu()}" var="veri">
+	<h:column>
+              <f:facet name="header">
+                  <h:outputLabel>Numara</h:outputLabel>
+              </f:facet>
+              <h:outputLabel value="#{veri.getOgrNumara()}"/>
+          </h:column>
+          <h:column>
+              <f:facet name="header">
+                  <h:outputLabel>Ad-Soyad</h:outputLabel>
+              </f:facet>
+              <h:outputLabel value="#{veri.getOgrAdSoyad()}"/>
+          </h:column>
+          <h:column>
+              <f:facet name="header">
+                  <h:outputLabel>Not</h:outputLabel>
+              </f:facet>
+              <h:outputLabel value="#{veri.getOgrNot()}"/>
+          </h:column>
+</h:dataTable>
+	
+</body>
+
+</html>

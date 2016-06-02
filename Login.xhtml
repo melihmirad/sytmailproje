@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+<!--<link href="Login.css" type="text/css" rel="stylesheet"/>  -->
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+body {
+  background-color:#fff;
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto,arial,sans-serif;
+}
+
+.container {
+    padding: 25px;
+    position: fixed;
+}
+
+.form-login {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    box-shadow:0 1px 0 #cfcfcf;
+}
+
+h4 { 
+ border:0 solid #fff; 
+ border-bottom-width:1px;
+ padding-bottom:10px;
+ text-align: center;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+	<div class="container">
+    <div class="jumbotron">
+            <h:form>
+            	<h3>Hoş Geldiniz</h3>
+            	<p><span class="label label-info">Kullanıcı Adı :</span></p>
+	           	<h:inputText class="form-control" id="kullanici" value="#{login.kullanici}" />
+	           	<br/>
+	           	<p><span class="label label-info">Şifre:</span></p>
+	           	<h:inputText class="form-control" id="sifre" value="#{login.sifre}" />
+	        	<br/> <br/>
+	           	<h:commandButton class="btn btn-primary btn-lg" value="Giriş" action="#{login.giris()}" />
+            </h:form>
+   	</div>
+	</div>
+</body>
+</html>
